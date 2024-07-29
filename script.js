@@ -9,3 +9,15 @@ if(input.type === "password"){
         icon.textContent = "visibility";
 }
 });
+
+document.getElementById("password").addEventListener("keydown",()=>{
+const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!"£$%&€])[A-Za-z\d!"£$%&€]{8,}$/;
+const password = document.getElementById("password").value;
+if(regex.test(password)){
+    output.innerHTML =`progressBar is setting in progress.`
+}
+else{
+    output.innerHTML=`there is an error producing result`;
+}
+
+})

@@ -83,3 +83,11 @@ input[type="password"]:focus,input[type="text"]:focus {
         font-size: 1.2em;
     }
 }
+#output{
+    width: 80%;
+    margin: 10%;
+    text-align: center;
+    background-color: green;
+    animation: anim 2s linear forwards;
+
+}
