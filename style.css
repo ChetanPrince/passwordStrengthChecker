@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Merriweather", serif;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+#container{
+width: 85%;
+height: 250px;
+margin-top: 25%;
+background: linear-gradient(45deg, rgba(100, 33, 224, 0.59),rgba(224, 81, 33, 0.59));
+/* padding: 20px; */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+}
+
+/* #password{
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgb(40, 221, 20);
+    outline: none;
+    border:none;
+}
+#password:focus {
+    background-color: rgb(156, 217, 170);
+} */
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+#wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+input[type="password"] {
+    width: 100%;
+    padding: 10px 40px 10px 10px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 10px rgb(40, 221, 20);
+    outline: none;
+    border: none;
+    font-size: 1em;
+}
+
+input[type="password"]:focus {
+    border: 2px solid #4CAF50; /* change border color on focus */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* optional: add a shadow */
+}
+
+.eye {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #666;
+    user-select: none;
+}
+
+/* Ensure the eye icon stays properly aligned on smaller screens */
+@media (max-width: 600px) {
+    input[type="password"] {
+        font-size: 0.9em;
+    }
+    .eye {
+        font-size: 1.2em;
+    }
+}
