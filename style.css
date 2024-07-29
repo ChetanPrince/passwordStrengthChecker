@@ -50,7 +50,7 @@ border-radius: 10px;
     align-items: center;
     position: relative;
 }
-input[type="password"] {
+input[type="password"],input[type="text"] {
     width: 100%;
     padding: 10px 40px 10px 10px;
     border-radius: 7px;
@@ -60,7 +60,7 @@ input[type="password"] {
     font-size: 1em;
 }
 
-input[type="password"]:focus {
+input[type="password"]:focus,input[type="text"]:focus {
     border: 2px solid #4CAF50; /* change border color on focus */
     box-shadow: 0 0 5px rgba(76, 175, 80, 0.5); /* optional: add a shadow */
 }
