@@ -87,7 +87,27 @@ input[type="password"]:focus,input[type="text"]:focus {
     width: 80%;
     margin: 10%;
     text-align: center;
-    background-color: green;
-    animation: anim 2s linear forwards;
+    animation: anim 5s linear forwards;
+    border-radius: 7px;
 
 }
+@keyframes anim {
+    0%{
+        background-image:linear-gradient(90deg, red, white, white, white);
+    }
+    25%{
+        background-image:linear-gradient(90deg, red, yellow, white, white);
+        
+    }
+    50%{
+        background-image:linear-gradient(90deg, red, yellow, orange, white);
+        
+    }
+    100%{
+        background-image:linear-gradient(90deg, red, yellow, orange, green);
+
+    }
+    
+}
+
+
