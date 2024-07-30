@@ -10,14 +10,37 @@ if(input.type === "password"){
 }
 });
 
-document.getElementById("password").addEventListener("keydown",()=>{
-const regex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!"£$%&€])[A-Za-z\d!"£$%&€]{8,}$/;
-const password = document.getElementById("password").value;
-if(regex.test(password)){
-    output.innerHTML =`progressBar is setting in progress.`
+
+document.getElementById("password").addEventListener("input",()=>{
+    const regex8 = /^.{8,}$/;
+    const regex1Cap8 = /^(?=.*[A-Z]).{8,}$/;
+    const regex1Cap81no = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    const regexComplete = /^(?=.*[A-Z])(?=.*\d)(?=.*[!"£$%&€])[A-Za-z\d!"£$%&€]{8,}$/;
+    const password = document.getElementById("password").value;
+    const output = document.getElementById("output");
+    
+    output.className = "";
+
+if(regexComplete.test(password)){
+   output.textContent=`Password is strong`;
+    output.classList.add("total");
 }
-else{
-    output.innerHTML=`there is an error producing result`;
+else if(regex1Cap81no.test(password)){
+    
+    output.classList.add("seventyfive");
+    output.textContent=`Password needs to have a special character`;
+}
+else if(regex1Cap8.test(password)){
+    output.textContent =`Password still needs improvement.`
+    output.classList.add("fifty");
+}
+else if(regex8.test(password)){
+    output.textContent =  `Password is too weak!`;
+    output.classList.add("quarter");
+}else{
+    output.textContent=`Password has to be minimum 8 characters 1 capital letter 1 numnber and a special character`;
+
 }
 
-})
+
+});

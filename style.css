@@ -83,31 +83,38 @@ input[type="password"]:focus,input[type="text"]:focus {
         font-size: 1.2em;
     }
 }
-#output{
+#outputWrap{
+    background: rgba(110, 100, 100, 0.307);
     width: 80%;
-    margin: 10%;
+    height: auto;
+    margin-top: 10%;
+    border-radius: 30px;
+}
+#output{
+    /* width: 1%; */
+    border-radius: 30px;
+    height: 100%;
     text-align: center;
-    animation: anim 5s linear forwards;
-    border-radius: 7px;
-
+    transition: 1s;
 }
-@keyframes anim {
-    0%{
-        background-image:linear-gradient(90deg, red, white, white, white);
-    }
-    25%{
-        background-image:linear-gradient(90deg, red, yellow, white, white);
-        
-    }
-    50%{
-        background-image:linear-gradient(90deg, red, yellow, orange, white);
-        
-    }
-    100%{
-        background-image:linear-gradient(90deg, red, yellow, orange, green);
-
-    }
-    
+.quarter{
+    background-image:linear-gradient(90deg, red, white, white, white);
+    width:25%;
+    /* transition: 5s; */
 }
-
-
+.fifty{
+    background-image:linear-gradient(90deg, yellow, yellow, white, white);
+    width:50%;
+    /* transition: 5s; */
+}
+.seventyfive{
+    /* transition: 5s; */
+    background-image:linear-gradient(90deg, orange, orange, orange, white);
+    width:75%;
+}
+.total{
+    transition: 5s;
+    background-color: green;
+    width:100%;
+}
+        
